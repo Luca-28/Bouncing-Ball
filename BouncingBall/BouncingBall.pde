@@ -2,11 +2,11 @@ int BoxLength = 500;
 int BoxChange = -1;
 
 
-float BallX = random(0,500); //Randomizes the balls starting position
-float BallY = random(0,500);
+float BallX = random(100,500); //Randomizes the balls starting position
+float BallY = random(100,500);
 
-float BallSpeedX = random(0,5);  //Randomizes the speed of the ball
-float BallSpeedY = random(0,5);
+float BallSpeedX = random(2,5);  //Randomizes the speed of the ball
+float BallSpeedY = random(2,5);
 
 void setup(){
   size(500,500);
@@ -40,8 +40,9 @@ void draw(){
   if(BallY > BoxLength){
     BallY = BoxLength;
   }
-  
+  fill(160);
   rect(0,0,BoxLength,BoxLength);  //Draws the box
+  fill(230);
   ellipse(BallX,BallY,10,10);  //Draws the ball
   
 }
